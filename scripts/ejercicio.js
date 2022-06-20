@@ -16,7 +16,22 @@ let ejecutarCodigo = () => {
                     {url: 'https://images.unsplash.com/photo-1648737963540-306235c8170e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwzMDF8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60', alt: 'papá'}
                 ]
     
-    for 
+    for (let i = 0; i < arreglo2.length; i++) {
+        svg = document.querySelector(".card svg");
+        //createImg
+            img = document.createElement("img");
+            const element = arreglo2[i];
+            for (const key in element) {
+                if(key=="url"){
+                    img.src = element[key];
+                }else{
+                    img.alt = element[key];
+                } 
+            }
+            svg.replaceWith(img);
+
+            
+    }
 
 }
 
